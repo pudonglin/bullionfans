@@ -241,7 +241,7 @@ ul.p_n-list a.next:hover {
 .footer-nav ul li{
 	list-style-type:none;
 	display: inline-block;
-	margin: 0 1em;
+	margin: 0 0.8em;
 }
 .footer-nav ul li a {
 	display: inline-block;
@@ -1614,7 +1614,7 @@ div#portfoliolist {
 }
 @media(max-width:640px){
 .header {
-    padding: 2em 2em 0;
+    padding: 0.5em 2em 0;
 }
 .header-logo {
 	width: 14.5%;
@@ -1627,7 +1627,7 @@ div#portfoliolist {
 	display: block;
 	position: relative;
 	cursor: pointer;
-	margin-bottom: 1.9em;
+	margin-bottom: 0.5em;
 }
 .top-nav  ul.nav1{
 	display:none;
@@ -2132,7 +2132,7 @@ ul.p_n-list li a {
   width: 12%;
 }
 .top-nav span.menu {
-  margin-bottom: 1.4em;
+  margin-bottom: 0.5em;
 }
 .bottom-nav ul {
   width: 100%;
