@@ -26,7 +26,7 @@ body a:hover{
 /*--header--*/
 .header{
 	background:black;
-	padding: 2em 0;
+	padding: 0.5em 0;
 }
 .header-logo{
 	float:left;
@@ -1053,12 +1053,12 @@ img.zoom-img:hover {
 .address ul li{
 	display: inline-block;
 }
-.address ul li.home {
+.address p span.home {
 	background: url(../images/icons-sprite.png) no-repeat 0px 1px;
 	display: inline-block;
 	width: 16px;
 	height: 16px;
-	margin: 0 .5em 3.3em 0;
+	margin: 0 .5em 0em 0;
 }
 .address p span.phn {
 	background: url(../images/icons-sprite.png) no-repeat -81px -22px;
