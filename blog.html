@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Blog</title>
+<title>BullionFans｜金币迷】Blog</title>
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <!--web-font-->
@@ -11,8 +11,7 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Showy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="金币迷, BullionFans, 普制金币, 视频展示" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="http://ajax.useso.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- //Custom Theme files -->
@@ -33,21 +32,44 @@
 		});
 </script>
 <!--//end-smoth-scrolling-->
+<script>
+    // 兼容性代码
+  function autoHeight(iframe) {
+    if (iframe) {
+        iframe.width = "100%";
+        //alert(iframe.clientWidth);
+        iframe.height = iframe.clientWidth/4*3;
+      
+    }
+  }
+  window.onload = function() {
+  	targets = document.getElementsByClassName('video_iframe')
+  	for (let i = 0; i < targets.length; i++) {
+  		let target = targets[i]
+	    autoHeight(target);
+
+		const resizeObserver = new ResizeObserver(() => {
+		 	autoHeight(target);
+		});
+		resizeObserver.observe(target)
+	}
+  }
+</script>
 </head>
 <body>
 	<!--header-->
 	<div class="header">
 		<div class="container">
 			<div class="header-logo">
-				<h1><a href="index.html">Showy</a></h1>
+				<h1><a href="index.html">BullionFans</a></h1>
 			</div>
 			<div class="top-nav">
 				<span class="menu"><img src="images/menu-icon.png" alt=""/></span>		
 				<ul class="nav1">
 					<span><a href="index.html" class="house"> </a></span>
-					<li><a href="index.html">NEWS</a></li>
-					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="index.html">HOME</a></li>
 					<li><a href="blog.html" class="active">BLOG</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
 					<li><a href="contact.html" >CONTACT</a></li>
 				</ul>
 				<!-- script-for-menu -->
@@ -66,7 +88,7 @@
 	<!--//header-->
 	<!--bottom-nav-->
 	<div class="bottom-nav">
-		<div class="container">
+		<!--<div class="container">
 			<span class="menu2"><img src="images/menu-icon.png" alt=""/></span>
 			<ul class="nav2">
 				<li><a href="gallery.html" class="active">Dresses</a></li>
@@ -74,29 +96,27 @@
 				<li><a href="gallery.html">Tops</a></li>
 				<li><a href="gallery.html">Outerwear</a></li>	
 			</ul>	
-		</div>
+		</div>-->
 	</div>
 	<!--//bottom-nav-->	
 	<!--single-page-->
 	<div class="single-page">
 		<div class="container">
 			<div class="col-md-8 single-page-left" >
-				<h4> <a href="singlepage.html">FRINGILLA CONDIMENTUM </a></h4>
-				<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on march 2, 2015 &nbsp;&nbsp; <a href="#">Comments</a>  (10)</p>
 				<div class="single-page-info">
-					<div class="sngl-img">
-						<a href="singlepage.html"> <img src="images/img15.jpg" class="img-responsive zoom-img" alt=""/></a>
-					</div>
-					<h5><a href="singlepage.html">CONDIMENTUM FRINGILLA FRINGILLA CONDIMENTUM,FINIBUS BONORUM MALORUM, DONEC UT QUAM LIGULA, SED NISI LOBORTIS.</a></h5>
-					<p class="sngl-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor If you are going to use a passage of Lorem Ipsum,
-						you need to be sure there isn't anything embarrassing hidden in the middle of text.<br>   
-						There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration  
-						in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
-						you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-					<div class="read-more">
-						<a href="newsblog.html"><span> Read More</span> </a>
-					</div>
-					<h4> <a href="singlepage.html">LOREM IPSUM DOLOR </a></h4>
+					<h4> Ameil 50 帆船介绍（测试博客） </h4>
+					<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on march 2, 2015 &nbsp;&nbsp; <!--<a href="#">Comments</a>  (10)--></p>
+					<iframe class="video_iframe" src="https://player.bilibili.com/player.html?aid=668812581&bvid=BV1Za4y1h7Pd&cid=212357776&page=1&as_wide=1" class="videoframe" width="100%" height="auto" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+					<p class="sngl-p">Amel是很棒的蓝水帆船。</p>
+
+
+					<h4> Ameil 50 帆船介绍 </h4>
+					<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on march 2, 2015 &nbsp;&nbsp; <!--<a href="#">Comments</a>  (10)--></p>
+					<iframe class="video_iframe" src="https://player.bilibili.com/player.html?aid=668812581&bvid=BV1Za4y1h7Pd&cid=212357776&page=1&as_wide=1" class="videoframe" width="100%" height="auto" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+					<p class="sngl-p">Amel是很棒的蓝水帆船。</p>
+
+
+					<!--<h4> <a href="singlepage.html">LOREM IPSUM DOLOR </a></h4>
 					<p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on march 5, 2015 &nbsp;&nbsp; <a href="#">Comments</a>  (10)</p>
 					<div class="sngl-img">
 						<a href="singlepage.html"> <img src="images/img31.jpg" class="img-responsive zoom-img" alt=""/></a>
@@ -107,7 +127,7 @@
 						consectetur adipisicing elit.There are many variations of passages of Lorem Ipsum available.</p> 
 					<div class="read-more">
 						<a href="singlepage.html"><span>Read More </span></a>
-					</div>
+					</div>-->
 				</div>
 			</div>	
 			<div class="col-md-4 single-page-right">
@@ -196,7 +216,7 @@
 				</div>
 			</div>
 			<div class="clearfix"> </div>
-			<div class="pag-nations sngl-pagntn">
+			<!--<div class="pag-nations sngl-pagntn">
 					<ul class="p_n-list">
 						<li><a href="#" class="prev"></a></li>
 						<li><a href="#">1</a></li>
@@ -204,13 +224,11 @@
 						<li><a href="#">3</a></li>
 						<li><a href="#">4</a></li>
 						<li><a href="#">5</a></li>
-						<li><a href="#">.</a></li>
-						<li><a href="#">.</a></li>
-						<li><a href="#">.</a></li>
+						<li><a href="#">...</a></li>
 						<li><a href="#" class="next"></a></li>
 					</ul>
 				</div>
-		</div>	
+		</div>-->	
 	</div>
 	<!--//single-page-->	
 	<!--//blog-->
@@ -220,8 +238,8 @@
 			<div class="col-md-4 footer-nav">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
 					<li><a href="blog.html">Blog</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
@@ -234,7 +252,7 @@
 				</ul>	
 			</div>
 			<div class="col-md-4 copy-right">
-				<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="https://www.webmoban.net" target="_blank" title="网站模板">网站模板</a> - Collect from <a href="https://www.webmoban.net" title="网页模板" target="_blank">网页模板</a></p>
+				<p>Copyright &copy; 2023.BullionFans All rights reserved.</p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
