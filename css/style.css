@@ -1253,6 +1253,10 @@ div#portfoliolist {
 .portfolio-wrapper:hover ul.social-ic{
 	display: block;
 }
+.coin-year {
+	text-align:center;
+	margin: 12px 12px 12px 12px;
+}
 /*---- responsive-design -----*/
 @media(max-width:1280px){
 }
