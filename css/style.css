@@ -23,6 +23,20 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+.box {
+	float: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  box-shadow: 0 0 8px #ccc;
+}
+.box img {
+	position: relative;
+		width:240px;
+}
+.box:hover {
+	box-shadow: 0 0 10px #999; 
+}
 /*--header--*/
 .header{
 	background:black;
@@ -1211,6 +1225,7 @@ ul#filters {
 }
 div#portfoliolist {
 	padding: 0px 0px;
+	position: relative;
 }	
 .portfolio-wrapper {
 	overflow:hidden;
