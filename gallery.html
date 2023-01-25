@@ -1360,20 +1360,20 @@
 						</a>
 						<div class="coin-year">2022</div>
 					</div>-->
-					<div class="box"><img src="images/panda/1982-1.jpeg" alt=""></div>
-			        <div class="box"><img src="images/panda/1982-2.jpeg" alt=""></div>
-					<div class="box"><img src="images/panda/1983-1.webp" alt=""></div>
-			        <div class="box"><img src="images/panda/1983-2.webp" alt=""></div>
-					<div class="box"><img src="images/panda/1984-1.jpeg" alt=""></div>
-			        <div class="box"><img src="images/panda/1984-2.jpeg" alt=""></div>
-					<div class="box"><img src="images/panda/1985-1.webp" alt=""></div>
-			        <div class="box"><img src="images/panda/1985-2.webp" alt=""></div>
-					<div class="box"><img src="images/panda/1986-1.webp" alt=""></div>
-			        <div class="box"><img src="images/panda/1986-2.webp" alt=""></div>
-					<div class="box"><img src="images/panda/1987.jpeg" alt=""></div>
-			        <div class="box"><img src="images/panda/1988-1.jpeg" alt=""></div>
-					<div class="box"><img src="images/panda/1988-2.jpeg" alt=""></div>
-			        <div class="box"><img src="images/panda/1989-1.jpeg" alt=""></div>
+					<div class="box"><img src="images/panda/1982-1.jpeg" alt=""><div class="coin-year">1982</div></div>
+			        <div class="box"><img src="images/panda/1982-2.jpeg" alt=""><div class="coin-year">1982</div></div>
+					<div class="box"><img src="images/panda/1983-1.webp" alt=""><div class="coin-year">1983</div></div>
+			        <div class="box"><img src="images/panda/1983-2.webp" alt=""><div class="coin-year">1983</div></div>
+					<div class="box"><img src="images/panda/1984-1.jpeg" alt=""><div class="coin-year">1984</div></div>
+			        <div class="box"><img src="images/panda/1984-2.jpeg" alt=""><div class="coin-year">1984</div></div>
+					<div class="box"><img src="images/panda/1985-1.webp" alt=""><div class="coin-year">1985</div></div>
+			        <div class="box"><img src="images/panda/1985-2.webp" alt=""><div class="coin-year">1985</div></div>
+					<div class="box"><img src="images/panda/1986-1.webp" alt=""><div class="coin-year">1986</div></div>
+			        <div class="box"><img src="images/panda/1986-2.webp" alt=""><div class="coin-year">1986</div></div>
+					<div class="box"><img src="images/panda/1987.jpeg" alt=""><div class="coin-year">1987</div></div>
+			        <div class="box"><img src="images/panda/1988-1.jpeg" alt=""><div class="coin-year">1988</div></div>
+					<div class="box"><img src="images/panda/1988-2.jpeg" alt=""><div class="coin-year">1988</div></div>
+			        <div class="box"><img src="images/panda/1989-1.jpeg" alt=""><div class="coin-year">1989</div></div>
 					<!--<div class="clearfix"> </div>-->
 				</div>	
 
@@ -1383,7 +1383,7 @@
 					let data_index = 0
 					$("#portfoliolist").waterfall({
 					    itemClass: ".box",
-					    minColCount: 2,
+					    minColCount: 1,
 					    spacingHeight: 10,
 					    resizeable: true,
 					    ajaxCallback: function(success, end) {
@@ -1586,10 +1586,11 @@
 								{ "src": "images/eagle/2022.jpeg", "title":"2022 1盎司 鹰扬金币","coin-year":"2022"}
 					        ]};
 					        var str = "";
-					        var templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);"><div class="pic"><img src="{{src}}" /></div></div>'
+					        var templ = '<div class="box" style="opacity:0;filter:alpha(opacity=0);"><div class="pic"><img src="{{src}}" /></div><div class="coin-year">{{coin-year}}</div></div>'
 
 					        let counter = 0;
 					        for(var i = data_index; i < data.data.length; i++) {
+					        	templ = templ.replace("{{coin-year}}", data.data[i]["coin-year"]);
 					            str += templ.replace("{{src}}", data.data[i].src);
 					            data_index++;
 					            counter++;
