@@ -76,7 +76,7 @@
 	<script type="text/javascript">
 			$(document).ready(function() {
 				jQuery(document).ready(function($) {
-					$.get("https://service-rvqz07l4-1251621137.gz.apigw.tencentcs.com/release/helloworld-1676554656",function(data,status){
+					$.get("https://service-rvqz07l4-1251621137.gz.apigw.tencentcs.com/release/helloworld-1676554656&ts="+Date.now(),function(data,status){
 		        		$("#sge_price").text(JSON.parse(data).b[0]);
 		        		var ts = parseInt(JSON.parse(data).t[0])
 		        		$("#sge_ts").text(new Date(ts*1000).toLocaleString());
