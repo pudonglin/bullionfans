@@ -25,12 +25,12 @@
 <script type="text/javascript" src="js/easing.js"></script>	
 <!--<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>-->
 <script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
+               jQuery(document).ready(function($) {
+                       $(".scroll").click(function(event){             
+                               event.preventDefault();
+                               $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                       });
+               });
 </script>
 <!--//end-smoth-scrolling-->
 </head>
@@ -69,13 +69,21 @@
 		<div class="container">
 			<span class="menu2"><img src="images/menu-icon.png" alt=""/></span>
 			<ul class="nav2">
-				<!--<li><a href="gallery.html" class="active">Dresses</a></li>
-				<li><a href="gallery.html">Shorts</a></li>
-				<li><a href="gallery.html">Tops</a></li>
-				<li><a href="gallery.html">Outerwear</a></li>	-->
+				<li>金交所：<span id="sge_price"></span>元/克，更新：<span id="sge_ts"></span></li>
 			</ul>	
 		</div>
 	</div>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				jQuery(document).ready(function($) {
+					$.get("https://service-rvqz07l4-1251621137.gz.apigw.tencentcs.com/release/helloworld-1676554656",function(data,status){
+		        		$("#sge_price").text(JSON.parse(data).b[0]);
+		        		var ts = parseInt(JSON.parse(data).t[0])
+		        		$("#sge_ts").text(new Date(ts*1000).toLocaleString());
+		    		});
+				});
+			});
+		</script>
 	<!--//bottom-nav-->	
     <!--<div class="copyrights">Collect from <a href="https://www.webmoban.net" >网页模板</a></div>-->
 	<!--banner-->
