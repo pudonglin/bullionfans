@@ -69,7 +69,7 @@
 		<div class="container">
 			<span class="menu2"><img src="images/menu-icon.png" alt=""/></span>
 			<ul class="nav2">
-				<li>金交所：<span id="sge_price"></span>元/克，更新：<span id="sge_ts"></span></li>
+				<li>金交所：<span id="sge_price"></span>元/克，<span id="sge_ts"></span></li>
 			</ul>	
 		</div>
 	</div>
@@ -79,7 +79,7 @@
 					$.get("https://service-rvqz07l4-1251621137.gz.apigw.tencentcs.com/release/helloworld-1676554656&ts="+Date.now(),function(data,status){
 		        		$("#sge_price").text(JSON.parse(data).b[0]);
 		        		var ts = parseInt(JSON.parse(data).t[0])
-		        		$("#sge_ts").text(new Date(ts*1000).toLocaleString());
+		        		$("#sge_ts").text(new Date(ts*1000).getMonth() + "/" + new Date(ts*1000).getDate() + " " + new Date(ts*1000).getHours() + ":" + new Date(ts*1000).getMinutes() + ":" + new Date(ts*1000).getSeconds());
 		    		});
 				});
 			});
